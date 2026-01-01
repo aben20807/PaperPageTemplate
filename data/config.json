@@ -1,0 +1,61 @@
+{
+    "ga_measurement_id": "GA_MEASUREMENT_ID",
+    "site_url": "https://yourwebsite.com/",
+    "meta_description": "Your research paper description for SEO. This appears in search engine results.",
+    "title": "Your Research Paper Title",
+    "authors": [
+        {"name": "Author One", "affiliations": [1], "orcid": "0000-0001-2345-6789"},
+        {"name": "Author Two", "affiliations": [2]},
+        {"name": "Author Three", "affiliations": [1, 2], "orcid": "0000-0002-3456-7890"}
+    ],
+    "affiliations": [
+        "University A, Department of Computer Science",
+        "University B, Research Lab"
+    ],
+    "links": [
+        {
+            "name": "Code",
+            "url": "https://github.com/username/project-name",
+            "icon": "github"
+        },
+        {
+            "name": "Paper",
+            "url": "https://arxiv.org/abs/XXXX.XXXXX",
+            "icon": "paper"
+        },
+        {
+            "name": "Model",
+            "url": "https://huggingface.co/username/model-name",
+            "icon": "cube"
+        },
+        {
+            "name": "Dataset",
+            "url": "https://huggingface.co/datasets/username/dataset-name",
+            "icon": "database"
+        }
+    ],
+    "abstract": "This is the abstract of your research paper. It should provide a comprehensive yet concise summary of your work, including the problem statement, methodology, key findings, and significance of your research. Replace this text with your actual abstract.",
+    "overview": "This is the overview of your research paper. It provides a broader context and background information, explaining the motivation behind the research and its potential impact. Replace this text with your actual overview.",
+    "results": [
+        {
+            "title": "Result 1",
+            "description": "Description of result 1",
+            "image": "images/result1.png"
+        },
+        {
+            "title": "Result 2",
+            "description": "Description of result 2",
+            "image": "images/result2.png"
+        },
+        {
+            "title": "Result 3",
+            "description": "Description of result 3",
+            "image": "images/result3.png"
+        }
+    ],
+    "footer": {
+        "copyright_year": "2025",
+        "project_name": "Project Name",
+        "text": "Open Source Project."
+    }
+}
