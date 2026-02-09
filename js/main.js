@@ -85,23 +85,30 @@ async function loadData() {
 
         // Set abstract
         const abstractText = document.getElementById('abstract-text');
-        abstractText.textContent = data.abstract;
+        abstractText.innerHTML = data.abstract;
         abstractText.classList.remove('placeholder');
 
         // Set overview
         const overviewText = document.getElementById('overview-text');
-        overviewText.textContent = data.overview;
+        overviewText.innerHTML = data.overview;
         overviewText.classList.remove('placeholder');
 
-        // Render results with images - replace placeholder cards
+        // Render results with images only when available
         const resultsContent = document.getElementById('results-content');
-        resultsContent.innerHTML = data.results.map(result => `
-            <div class="result-card">
-                <h3>${result.title}</h3>
-                <p>${result.description}</p>
-                <img src="${result.image}" alt="${result.title}" loading="lazy" width="800" height="450">
-            </div>
-        `).join('');
+        resultsContent.innerHTML = data.results.map(result => {
+            const descriptionHtml = result.description ? `<p">${result.description}</p>` : '';
+            const imageHtml = result.image
+                ? `<img src="${result.image}" alt="${result.title}" loading="lazy" width="800" height="450">`
+                : '';
+
+            return `
+                <div class="result-card">
+                    <h3>${result.title}</h3>
+                    ${descriptionHtml}
+                    ${imageHtml}
+                </div>
+            `;
+        }).join('');
 
     } catch (error) {
         console.error('Error loading data:', error);

@@ -242,6 +242,8 @@
                         window.gtag = gtag;
                         gtag('js', new Date());
                         gtag('config', config.ga_measurement_id);
+                    } else {
+                        console.warn('Google Analytics measurement ID is not set in config.json. Skipping GA initialization.');
                     }
                 })
                 .catch(err => console.log('Config not loaded:', err));
