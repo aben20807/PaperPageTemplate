@@ -53,6 +53,7 @@
             "image": "images/result3.png"
         }
     ],
+    "citation": "data/cite.bib",
     "footer": {
         "copyright_year": "2025",
         "project_name": "Project Name",

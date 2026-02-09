@@ -85,6 +85,73 @@ main {
     white-space: nowrap;
 }
 
+.citation-container {
+    position: relative;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+.citation-text {
+    margin: 0;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+    min-height: 80px;
+}
+
+.citation-text code {
+    background: transparent;
+    padding: 0;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.copy-btn svg {
+    fill: currentColor;
+}
+
+.copy-btn:hover {
+    background: var(--primary-color);
+    transform: translateY(-1px);
+}
+
+.copy-btn:active {
+    transform: translateY(0);
+}
+
+.copy-btn.copied {
+    background: #48bb78;
+}
+
+.copy-btn.copied::after {
+    content: 'Copied!';
+    margin-left: 0.25rem;
+}
+
 #links {
     margin: 2.5rem 0;
 }

@@ -93,6 +93,33 @@ async function loadData() {
         overviewText.innerHTML = data.overview;
         overviewText.classList.remove('placeholder');
 
+        // Load and display citation if provided
+        if (data.citation) {
+            try {
+                const citationResponse = await fetch(data.citation);
+                const citationText = await citationResponse.text();
+                const citationElement = document.getElementById('citation-text');
+                citationElement.textContent = citationText.trim();
+                citationElement.classList.remove('placeholder');
+                
+                // Set up copy button
+                const copyBtn = document.getElementById('copy-citation');
+                copyBtn.addEventListener('click', () => {
+                    navigator.clipboard.writeText(citationText.trim()).then(() => {
+                        copyBtn.classList.add('copied');
+                        setTimeout(() => {
+                            copyBtn.classList.remove('copied');
+                        }, 2000);
+                    });
+                });
+            } catch (error) {
+                console.error('Error loading citation:', error);
+                document.getElementById('citation').style.display = 'none';
+            }
+        } else {
+            document.getElementById('citation').style.display = 'none';
+        }
+
         // Render results with images only when available
         const resultsContent = document.getElementById('results-content');
         resultsContent.innerHTML = data.results.map(result => {
