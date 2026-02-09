@@ -96,7 +96,7 @@ async function loadData() {
         // Render results with images only when available
         const resultsContent = document.getElementById('results-content');
         resultsContent.innerHTML = data.results.map(result => {
-            const descriptionHtml = result.description ? `<p">${result.description}</p>` : '';
+            const descriptionHtml = result.description ? `<p>${result.description}</p>` : '';
             const imageHtml = result.image
                 ? `<img src="${result.image}" alt="${result.title}" loading="lazy" width="800" height="450">`
                 : '';
