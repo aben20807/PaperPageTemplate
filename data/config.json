@@ -24,6 +24,11 @@
             "icon": "paper"
         },
         {
+            "name": "Preprint",
+            "url": "https://arxiv.org/abs/XXXX.XXXXX",
+            "icon": "arxiv"
+        },
+        {
             "name": "Model",
             "url": "https://huggingface.co/username/model-name",
             "icon": "cube"
@@ -32,6 +37,11 @@
             "name": "Dataset",
             "url": "https://huggingface.co/datasets/username/dataset-name",
             "icon": "database"
+        },
+        {
+            "name": "Benchmark",
+            "url": "https://huggingface.co/datasets/username/dataset-name",
+            "icon": "benchmark"
         }
     ],
     "abstract": "This is the abstract of your research paper. It should provide a comprehensive yet concise summary of your work, including the problem statement, methodology, key findings, and significance of your research. Replace this text with your actual abstract.",
