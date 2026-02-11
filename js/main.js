@@ -93,6 +93,15 @@ async function loadData() {
         overviewText.innerHTML = data.overview;
         overviewText.classList.remove('placeholder');
 
+        // Load and display acknowledgements if provided
+        if (data.acknowledgements) {
+            const acknowledgementsText = document.getElementById('acknowledgements-text');
+            acknowledgementsText.innerHTML = data.acknowledgements;
+            acknowledgementsText.classList.remove('placeholder');
+        } else {
+            document.getElementById('acknowledgements').style.display = 'none';
+        }
+
         // Load and display citation if provided
         if (data.citation) {
             try {

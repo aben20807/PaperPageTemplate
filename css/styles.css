@@ -204,7 +204,8 @@ main {
 
 #abstract,
 #overview,
-#results {
+#results,
+#acknowledgements {
     margin: 3rem 0;
 }
 
@@ -219,7 +220,8 @@ main {
 }
 
 .abstract-text,
-.overview-text {
+.overview-text,
+.acknowledgements-text {
     font-size: 1.15rem;
     color: var(--text-dark);
     text-align: justify;

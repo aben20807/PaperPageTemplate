@@ -53,6 +53,7 @@
             "image": "images/result3.png"
         }
     ],
+    "acknowledgements": "We would like to thank our colleagues and funding agencies for their support. Replace this text with your actual acknowledgements.",
     "citation": "data/cite.bib",
     "footer": {
         "copyright_year": "2025",
